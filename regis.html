@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+    }
+
+    .registration {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .password-field {
+      position: relative;
+    }
+
+    .password-field i {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<section class="registration">
+  <div class="container">
+    <h2>Registration</h2>
+    <form id="registrationForm" method="post" action="register.php" onsubmit="return validateForm()">
+
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <div class="password-field">
+          <input type="password" id="password" name="password" required>
+          <i class="fas fa-eye-slash" onclick="togglePasswordVisibility('password')"></i>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password:</label>
+        <div class="password-field">
+          <input type="password" id="confirm-password" name="confirm-password" required>
+          <i class="fas fa-eye-slash" onclick="togglePasswordVisibility('confirm-password')"></i>
+        </div>
+      </div>
+      <input type="submit" value="Register">
+    </form>
+    <p>Already have an account? <a href="signin.html">Sign In</a></p>
+  </div>
+</section>
+
+<script>
+  // Function to toggle password visibility
+  function togglePasswordVisibility(fieldId) {
+    var passwordField = document.getElementById(fieldId);
+    var icon = passwordField.nextElementSibling;
+
+    if (passwordField.type === "password") {
+      passwordField.type = "text";
+      icon.classList.remove("fa-eye-slash");
+      icon.classList.add("fa-eye");
+    } else {
+      passwordField.type = "password";
+      icon.classList.remove("fa-eye");
+      icon.classList.add("fa-eye-slash");
+    }
+  }
+</script>
+
+</body>
+</html>

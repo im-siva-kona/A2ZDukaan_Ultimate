@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services Page</title>
+  <link rel="stylesheet" href="services.css">
+  <style>
+    /* Additional CSS */
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; /* Distribute items evenly with some space */
+    }
+    .service {
+      flex: 0 1 calc(25% - 20px); /* 25% width for each service with margin */
+      margin: 10px; /* Add some margin between services */
+    }
+    .service img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Our Services</h1>
+</header>
+
+<section class="services-grid">
+  <section class="services-grid">
+    <div class="service" id="home-repair" onclick="showServiceActions('home-repair')">
+      <img src="home.jpg" alt="Home Repair">
+      <h2>Home Repair</h2>
+      <button class="bookNowBtn" data-url="https://hometriangle.com/chennai/undefined?lat=13.11859&lng=80.10255&loc=Avadi%20Railway%20Station,%20Railway%20Station%20Road,%20Anna%20Square,%20Avadi,%20Chennai%20600054,%20India">Book Now</button>
+    </div>
+    <div class="service" id="farm-work" onclick="showServiceActions('farm-work')">
+      <img src="farmwork.jpg" alt="Farm Work">
+      <h2>Farm Work</h2>
+      <button class="bookNowBtn" data-url="farm-work-booking.html">Book Now</button>
+    </div>
+   
+    <div class="service" id="delivery-works" onclick="showServiceActions('delivery-works')">
+      <img src="delivery.jpg" alt="Delivery Works">
+      <h2>Delivery Works</h2>
+      <button class="bookNowBtn" data-url="https://www.jobhai.com/delivery-delivery-boy-job-in-parishram-resource-avadi-chennai-0-to-0-years-1708399681-3371612-jid">Book Now</button>
+    </div>
+    <div class="service" id="plumbing-services" onclick="showServiceActions('plumbing-services')">
+      <img src="plumbing.jpg" alt="Plumbing Services">
+      <h2>Plumbing Services</h2>
+      <button class="bookNowBtn" data-url="plumbing-services-booking.html">Book Now</button>
+    </div>
+    <div class="service" id="gardening-services" onclick="showServiceActions('gardening-services')">
+      <img src="garden.jpg" alt="Gardening Services">
+      <h2>Gardening Services</h2>
+      <button class="bookNowBtn" data-url="gardening-services-booking.html">Book Now</button>
+    </div>
+    <div class="service" id="home-cleaning" onclick="showServiceActions('home-cleaning')">
+      <img src="cleaning.jpg" alt="Cleaning Services">
+      <h2>Home Cleaning</h2>
+      <button class="bookNowBtn" data-url="https://hometriangle.com/chennai/undefined?lat=13.11859&lng=80.10255&loc=Avadi%20Railway%20Station,%20Railway%20Station%20Road,%20Anna%20Square,%20Avadi,%20Chennai%20600054,%20India">Book Now</button>
+    </div>
+    <div class="service" id="vehicle-washing" onclick="showServiceActions('vehicle-washing')">
+      <img src="vehicle washing.jpg" alt="Vehicle Washing">
+      <h2>Vehicle Washing</h2>
+      <button class="bookNowBtn" data-url="vehicle-washing-booking.html">Book Now</button>
+    </div>
+    <div class="service" id="laundry-service" onclick="showServiceActions('laundry-service')">
+      <img src="laundry.jpg" alt="Laundry + Iron Service">
+      <h2>Laundry + Iron Service</h2>
+      <button class="bookNowBtn" data-url="laundry-service-booking.html">Book Now</button>
+    </div>
+    <div class="service" id="painting-services" onclick="showServiceActions('painting-services')">
+      <img src="painting.jpg" alt="Painting Services">
+      <h2>Painting Services</h2>
+      <button class="bookNowBtn" data-url="https://www.nobroker.in/painting-services-in-chennai?utm_source=google&utm_medium=cpc&utm_campaign=Search_Painting_HomeServices_Broad_Exterior_AllCities&adgroup=Exterior_External_Broad&utm_term=exterior_painting&utm_source=google&utm_medium=cpc&utm_campaign=Search_Painting_HomeServices_Broad_Exterior_AllCities&adgroup=Exterior_External_Broad&gad_source=1&gclid=CjwKCAjw88yxBhBWEiwA7cm6pXQxFKGA0iOgLyIUqu4z3CDSWhlV6ztAAAaKWcoyAPD411piTFApKBoCD24QAvD_BwE">Book Now</button>
+    </div>
+    <div class="service" id="electrical-services" onclick="showServiceActions('electrical-services')">
+      <img src="electrical.jpg" alt="Electrical Services">
+      <h2>Electrical Services</h2>
+      <button class="bookNowBtn" data-url="https://www.nobroker.in/electrician-services-in-chennai">Book Now</button>
+    </div>
+    <div class="service" id="carpentry-services" onclick="showServiceActions('carpentry-services')">
+      <img src="carpentary.jpg" alt="Carpentry Services">
+      <h2>Carpentry Services</h2>
+      <button class="bookNowBtn" data-url="https://www.sulekha.com/carpenters/avadi-chennai">Book Now</button>
+    </div>
+    <div class="service" id="moving-services" onclick="showServiceActions('moving-services')">
+      <img src="moving.jpg" alt="Moving Services">
+      <h2>Moving Services</h2>
+      <button class="bookNowBtn" data-url="moving-services-booking.html">Book Now</button>
+    </div>
+    <div class="service" id="hair-styling" onclick="showServiceActions('hair-styling')">
+      <img src="haircut.jpg" alt="Hair Styling">
+      <h2>Hair Styling</h2>
+      <button class="bookNowBtn" data-url="hair-styling-booking.html">Book Now</button>
+    </div>
+    <div class="service" id="tailoring" onclick="showServiceActions('tailoring')">
+      <img src="tailoring.jpg" alt="Tailoring">
+      <h2>Tailoring</h2>
+      <button class="bookNowBtn" data-url="https://www.sulekha.com/tailors/avadi-chennai">Book Now</button>
+    </div>
+    <div class="service" id="photography" onclick="showServiceActions('photography')">
+      <img src="photography.jpg" alt="Photography">
+      <h2>Photography</h2>
+      <button class="bookNowBtn" data-url="https://www.weddingbazaar.com/perfect-wedding-photographers/chennai?&utm_source=google&utm_medium=cpc&utm_campaign=Google_cpc_photo_Chennai_Exact_Jan2024&gad_source=1&gclid=CjwKCAjw88yxBhBWEiwA7cm6pb78wutSneoxFkzl2Wp-qJ4Js4J__evHIhTwkLqaZy9yYNpWPw4ePRoCC_YQAvD_BwE">Book Now</button>
+    </div>
+    <div class="service" id="catering-services" onclick="showServiceActions('catering-services')">
+      <img src="catering.jpg" alt="Catering Services">
+      <h2>Catering Services</h2>
+      <button class="bookNowBtn" data-url="https://www.weddingbazaar.com/perfect-wedding-photographers/chennai?&utm_source=google&utm_medium=cpc&utm_campaign=Google_cpc_photo_Chennai_Exact_Jan2024&gad_source=1&gclid=CjwKCAjw88yxBhBWEiwA7cm6pb78wutSneoxFkzl2Wp-qJ4Js4J__evHIhTwkLqaZy9yYNpWPw4ePRoCC_YQAvD_BwE">Book Now</button>
+    </div>
+    <div class="service" id="dj-services" onclick="showServiceActions('dj-services')">
+      <img src="dj.jpg" alt="DJ Services">
+      <h2>DJ Services</h2>
+      <button class="bookNowBtn" data-url="dj-services-booking.html">Book Now</button>
+    </div>
+    <div class="service" id="construction-works" onclick="showServiceActions('construction-works')">
+      <img src="construction.jpg" alt="Construction Works">
+      <h2>Construction Works</h2>
+      <button class="bookNowBtn" data-url="https://hometriangle.com/chennai/undefined?lat=13.11859&lng=80.10255&loc=Avadi%20Railway%20Station,%20Railway%20Station%20Road,%20Anna%20Square,%20Avadi,%20Chennai%20600054,%20India">Book Now</button>
+    </div>
+  </section>
+
+  
+</section>
+
+<!-- Modal for displaying service details -->
+<div id="serviceModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalPrice"></p>
+    <p id="modalArrivalTime"></p>
+    <p id="modalWorkHours"></p>
+
+    <button id="callBtn">Call</button>
+    <button id="reviewsBtn">Reviews</button>
+  </div>
+</div>
+
+<!-- Floating contact button -->
+<div class="floating-contact-button">
+  <a href="contactus.htm">Contact Us</a>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="services.js"></script>
+
+<script>
+  function showServiceActions(serviceId) {
+    const modal = document.getElementById("serviceModal");
+    const callBtn = document.getElementById("callBtn");
+    const reviewsBtn = document.getElementById("reviewsBtn");
+
+    // Show call and reviews buttons
+    callBtn.style.display = "block";
+    reviewsBtn.style.display = "block";
+
+    // Update modal content based on serviceId if needed
+
+    // Display modal
+    modal.style.display = "block";
+  }
+
+  function hideServiceActions() {
+    const modal = document.getElementById("serviceModal");
+    modal.style.display = "none";
+  }
+
+  function makeCall() {
+    // Replace the number below with your phone number
+    window.location.href = "tel:+1234567890";
+  }
+
+  // Get all the book now buttons
+  const bookNowButtons = document.querySelectorAll('.bookNowBtn');
+
+  // Add event listener to each button
+  bookNowButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const url = button.getAttribute('data-url');
+      window.location.href = url; // Redirect to the specified URL
+    });
+  });
+</script>
+
+</body>
+</html>

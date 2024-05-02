@@ -1,0 +1,197 @@
+/* services.css */
+
+/* Style the services grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Make grid wider and have three services per row */
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light gray background */
+}
+
+/* Style individual service items */
+.service {
+  
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  background-color: #fff; /* White background */
+}
+
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.service img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.service h2 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Style the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style modal content */
+.modal-content p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.modal-content button {
+  margin: 10px 5px;
+  padding: 10px 20px; 
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+
+/* added */
+
+
+.service {
+  position: relative; /* Ensure the service div is positioned relative to its parent */
+}
+
+.worker-info {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+  padding: 10px;
+  border-radius: 10px; /* Rounded borders */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center; /* Center text horizontally */
+  top: 50%; /* Position at 50% from the top */
+  left: 50%; /* Position at 50% from the left */
+  transform: translate(-50%, -50%); /* Center the div */
+}
+
+.worker-info p {
+  margin: 5px 0; /* Adjust margin for paragraph elements */
+}
+/* CSS for floating contact button */
+.floating-contact-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.floating-contact-button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service {
+  position: relative;
+  width: 200px; /* Adjust as needed */
+}
+
+.service img {
+  width: 100%;
+  height: auto;
+}
+
+.service h2 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.bookNowBtn {
+  color:rgba(0, 0, 255, 0.505)  ;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  text-align: center;
+  padding: 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bookNowBtn:hover {
+  background-color: #ff5c5452;
+  color: rgb(2, 0, 6);
+}
+
+/* CSS for the reviews section */
+.reviews {
+  display: none; /* Hide the reviews section by default */
+}
+
+.reviews h2 {
+  margin-bottom: 10px;
+}
+
+.review {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc; /* Add a border between reviews */
+}
+
+.review p {
+  margin: 5px 0;
+}
+
